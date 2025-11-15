@@ -32,7 +32,6 @@ fields = [
     (316, 317), # hypertension eclampsia (Y,N,U)
     (317, 318), # previous pre-term birth (Y,N,U)
     (324, 325), # infertility treatment (Y,N,U)
-    (325, 326), # fertility enhancing drugs (Y,N,X,U)
     (330, 331), # previous c-section (Y,N,U)
     (352, 353), # no infections (1,0,9)
     (382, 383), # induction (Y,N,U)
@@ -46,7 +45,7 @@ fields = [
 headers = ['month', 'time', 'day', 'place', 'm_age', 'm_nativity', 'm_edu',
            'num_of_prenatals', 'WIC', 'smoker', 'm_bmi', 'pre_diabetes',
            'gest_diabetes', 'pre_hypertension', 'gest_hypertension',
-           'eclampsia', 'preterm_births', 'infert_treatment', 'fert_drugs',
+           'eclampsia', 'preterm_births', 'infert_treatment',
            'prev_c_section', 'no_infections', 'induction', 'steroids',
            'antibiotics', 'anesthesia', 'delivery_method']
 
