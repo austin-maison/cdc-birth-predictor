@@ -8,11 +8,15 @@ will be a C-section.
 
 ## Overview
 
+
 This project applies classification models to CDC birth records to predict C‑section
 outcomes and attempts to identify key maternal and pregnancy factors associated with
-them. The project demonstrates how data science can support early recognition of 
-medically necessary C‑sections and improve health outcomes for mothers and their 
-babies.
+them. The genesis of this project came out of a conversation I had with my wife after 
+we noticed that, in our social circle, induced labor seemed to have a strong positive
+correlation with having an unplanned C-section. We wanted to know if this was more 
+broadly true so, I set out to test this hypothesis (it in fact has a negative 
+correlation). Since then, the project has evolved into looking for *any* pre-birth 
+predictors of C-sections. 
 
 
 ## Dataset
@@ -31,24 +35,12 @@ data types using pandas
 
 ## Methodology
 
-In this project, we chose 3 classifiers, using Scikit Learn, to train on the CDC
-data: a decision tree, a random forest, and a gradient boosting classifier. With 
-each model, we first trained with the "out-of-the-box" hyperparameters and compared 
-the results with the hyperparameters found using GridSearchCV and a small parameter 
-grid. For the purpose of quick experimentation, we used a random sample of 10000 
-records from the dataset when training these models. We chose to evaluate these 
-models using their accuracy and recall scores. Our reasoning for including recall 
-is simply because predicting that a mother does not need a C-section when in fact 
-she does can be life-threatening; we want to avoid false negatives as much as 
-possible.
+- **Tools:** Python, pandas, scikit-learn, scipy, numpy, matplotlib, seaborn
 
+- **Models:** Decision Tree as a benchmark, Random Forest, Gradient Boosting  
 
-
-## Methodology
-
-- **Models:** Decision Tree, Random Forest, Gradient Boosting (Scikit‑Learn)  
-
-- **Training:** Random sample of 10,000 records for experimentation  
+- **Training:** Used 67/33 train test split on random sample of 10000 records for
+experimentation and model selection, then on full dataset for final model
 
 - **Hyperparameters:** Compared default settings with GridSearchCV tuning  
 
@@ -56,6 +48,34 @@ possible.
 false negatives (critical in healthcare contexts)
 
 
+## Results
+
+- **Best model:** Random Forest
+
+- **Accuracy score** = 79%, an 11.4% improvement over the trivial classifier
+
+- **Recall score:** = 54%
+
+- **Most predictive features:** Previous C-sections, mother's BMI, number of prenatal visits, 
+mother's age, mother's education, induced labor, use of antibiotics, time of day   
 
 
+## Future work
 
+The final results leave much to be desired for a healthcare context. However, comparing these
+results to [a 2023 study](https://pmc.ncbi.nlm.nih.gov/articles/PMC10422959/) whose model 
+achieves a 72% accuracy score, I believe that this is only the beginning of a fascinating and 
+important line of investigation which deserves more attention.
+
+One potential reason for the suboptimal performance is that the data doesn't include many of 
+the known predictors of a C-section e.g. having twins, prolonged labor, fetal position, etc. 
+It also doesn't distiguish between emergency C-sections and C-sections planned in advance.
+However, I believe this can be seen as a strength rather than weakness. A further investigation 
+of factors which are *not* known to be predictive of a C-section have the potential to 
+contribute more to understanding of C-sections than already well-studied factors. And, indeed, 
+this project shows that their is a nontrivial amount of signal to be found in a wide range of 
+factors.
+
+
+The future of this project lies in incorporating more pre-birth factors, both unintuitive and
+well-established, to see just how far a predictive model can be pushed.
