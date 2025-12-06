@@ -2,9 +2,9 @@
 venv/
 
 # Data
-data/raw/
-data/interim/
-data/processed/
+data/raw/raw_data.txt
+data/interim/raw_data.csv
+data/processed/processed_data.csv
 
 # Outputs
 /outputs/
