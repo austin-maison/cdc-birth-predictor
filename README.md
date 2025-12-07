@@ -69,11 +69,11 @@ important line of investigation which deserves more attention.
 
 One potential reason for the suboptimal performance is that the data doesn't include many of 
 the known predictors of a C-section e.g. having twins, prolonged labor, fetal position, etc. 
-It also doesn't distiguish between emergency C-sections and C-sections planned in advance.
+It also doesn't distinguish between emergency C-sections and C-sections planned in advance.
 However, I believe this can be seen as a strength rather than weakness. A further investigation 
 of factors which are *not* known to be predictive of a C-section have the potential to 
 contribute more to the understanding of C-sections than the already well-studied factors. And, 
-indeed, this project shows that their is a nontrivial amount of signal to be found in a wide 
+indeed, this project shows that there is a nontrivial amount of signal to be found in a wide 
 range of factors.
 
 
