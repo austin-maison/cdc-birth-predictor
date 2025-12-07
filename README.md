@@ -14,7 +14,7 @@ outcomes and attempts to identify key maternal and pregnancy factors associated 
 them. The genesis of this project came out of a conversation I had with my wife after 
 we noticed that, in our social circle, induced labor seemed to have a strong positive
 correlation with having an unplanned C-section. We wanted to know if this was more 
-broadly true so, I set out to test this hypothesis (it in fact has a negative 
+broadly true, so I set out to test this hypothesis (it in fact has a negative 
 correlation). Since then, the project has evolved into looking for *any* pre-birth 
 predictors of C-sections. 
 
@@ -30,12 +30,12 @@ predictors of C-sections.
 `raw_to_csv.py`, dropped rows with missing values, reformatted columns, and optimized 
 data types using pandas
 
-- **Outputs:** `raw_data.csv` > `processed_data.csv`
+- **Outputs:** `raw_data.csv`, `processed_data.csv`
 
 
 ## Methodology
 
-- **Tools:** Python, pandas, scikit-learn, scipy, numpy, matplotlib, seaborn
+- **Tools:** Python, pandas, numpy, scipy, matplotlib, seaborn, scikit-learn
 
 - **Models:** Decision Tree as a benchmark, Random Forest, Gradient Boosting  
 
@@ -54,7 +54,7 @@ false negatives (critical in healthcare contexts)
 
 - **Accuracy score** = 79%, an 11.4% improvement over the trivial classifier
 
-- **Recall score:** = 54%
+- **Recall score** = 54%
 
 - **Most predictive features:** Previous C-sections, mother's BMI, number of prenatal visits, 
 mother's age, mother's education, induced labor, use of antibiotics, time of day   
@@ -72,9 +72,9 @@ the known predictors of a C-section e.g. having twins, prolonged labor, fetal po
 It also doesn't distiguish between emergency C-sections and C-sections planned in advance.
 However, I believe this can be seen as a strength rather than weakness. A further investigation 
 of factors which are *not* known to be predictive of a C-section have the potential to 
-contribute more to understanding of C-sections than already well-studied factors. And, indeed, 
-this project shows that their is a nontrivial amount of signal to be found in a wide range of 
-factors.
+contribute more to the understanding of C-sections than the already well-studied factors. And, 
+indeed, this project shows that their is a nontrivial amount of signal to be found in a wide 
+range of factors.
 
 
 The future of this project lies in incorporating more pre-birth factors, both unintuitive and

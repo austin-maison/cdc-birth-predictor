@@ -3,12 +3,10 @@ from pathlib import Path
 
 
 # Get relative paths to input and output directories
-
 RAW_DIR = Path(__file__).resolve().parents[1] / "data" / "raw"
 INTERIM_DIR = Path(__file__).resolve().parents[1] / "data" / "interim"
 
 # Input and output files
-
 input_file = RAW_DIR / "raw_data.txt"
 output_file = INTERIM_DIR / "raw_data.csv"
 
