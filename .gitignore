@@ -6,9 +6,6 @@ data/raw/raw_data.txt
 data/interim/raw_data.csv
 data/processed/processed_data.csv
 
-# Outputs
-/outputs/
-
 # Jupyter
 .ipynb_checkpoints/
 
